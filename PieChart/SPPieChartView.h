@@ -10,4 +10,6 @@
 
 @interface SPPieChartView : UIView
 
+@property (strong, nonatomic) NSMutableArray *pieChartValues;
+
 @end

@@ -30,11 +30,23 @@
 
 - (id)initWithFrame:(CGRect)frame
 {
-    self = [super initWithFrame:frame];
+    self = [self initWithFrame:frame pieChartValues:nil];
     
     if (self)
     {
         // Initialization code
+    }
+    
+    return self;
+}
+
+- (id)initWithFrame:(CGRect)frame pieChartValues:(NSArray *)pieChartValues
+{
+    self = [super initWithFrame:frame];
+    
+    if (self)
+    {
+        self.pieChartValues = pieChartValues.mutableCopy;
     }
     
     return self;
