@@ -7,9 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SPPieChartValue.h"
 
 @interface SPPieChartView : UIView
 
-@property (strong, nonatomic) NSMutableArray *pieChartValues;
+@property (strong, nonatomic) UIColor *pieChartBackgroundColor;
+@property (strong, nonatomic) NSArray *pieChartValues;
 
 @end

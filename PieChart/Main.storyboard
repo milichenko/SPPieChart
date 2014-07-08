@@ -4,10 +4,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Test View Controller-->
         <scene sceneID="DJt-7U-Oss">
             <objects>
-                <viewController id="uU1-hT-hi1" sceneMemberID="viewController">
+                <viewController id="uU1-hT-hi1" customClass="SPTestViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="gJB-9J-iZ1"/>
                         <viewControllerLayoutGuide type="bottom" id="S3q-EV-ERc"/>
@@ -15,8 +15,18 @@
                     <view key="view" contentMode="scaleToFill" id="V3R-Bg-uv5">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZJc-RD-Yb3" customClass="SPPieChartView">
+                                <rect key="frame" x="0.0" y="73" width="320" height="242"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="pieChartView" destination="ZJc-RD-Yb3" id="2vt-C9-Qfy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iEv-Cd-xNY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

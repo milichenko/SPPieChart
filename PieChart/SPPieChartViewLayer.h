@@ -10,4 +10,7 @@
 
 @interface SPPieChartViewLayer : CALayer
 
+@property (strong, nonatomic) UIColor *pieChartBackgroundcolor;
+@property (strong, nonatomic) NSMutableArray *pieChartValues;
+
 @end

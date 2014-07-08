@@ -30,7 +30,7 @@
 
 - (id)initWithFrame:(CGRect)frame
 {
-    self = [self initWithFrame:frame pieChartValues:nil];
+    self = [self initWithFrame:frame backgroundColor:nil pieChartValues:nil];
     
     if (self)
     {
@@ -40,16 +40,32 @@
     return self;
 }
 
-- (id)initWithFrame:(CGRect)frame pieChartValues:(NSArray *)pieChartValues
+- (id)initWithFrame:(CGRect)frame backgroundColor:(UIColor *)backgroundColor pieChartValues:(NSArray *)pieChartValues
 {
     self = [super initWithFrame:frame];
     
     if (self)
     {
+        self.pieChartBackgroundColor = backgroundColor;
         self.pieChartValues = pieChartValues.mutableCopy;
+        self.layer.contentsScale = [[UIScreen mainScreen] scale];
+        [self.layer setNeedsDisplay];
     }
     
     return self;
+}
+
+- (NSArray *)pieChartValues
+{
+    SPPieChartViewLayer *layer = (SPPieChartViewLayer *)self.layer;
+    return layer.pieChartValues;
+}
+
+- (void)setPieChartValues:(NSMutableArray *)pieChartValues
+{
+    SPPieChartViewLayer *layer = (SPPieChartViewLayer *)self.layer;
+    layer.pieChartValues = pieChartValues;
+    layer.pieChartBackgroundcolor = self.pieChartBackgroundColor;
 }
 
 @end

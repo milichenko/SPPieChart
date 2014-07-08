@@ -23,6 +23,7 @@
 		0F0D9792196AE8AE00D13FD8 /* SPPieChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F0D9791196AE8AE00D13FD8 /* SPPieChartView.m */; };
 		0F0D9795196AE94A00D13FD8 /* SPPieChartViewLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F0D9794196AE94A00D13FD8 /* SPPieChartViewLayer.m */; };
 		0F0D9798196AECC000D13FD8 /* SPPieChartValue.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F0D9797196AECC000D13FD8 /* SPPieChartValue.m */; };
+		0F287489196BE14D007601DC /* SPTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F287488196BE14D007601DC /* SPTestViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,8 @@
 		0F0D9794196AE94A00D13FD8 /* SPPieChartViewLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPPieChartViewLayer.m; sourceTree = "<group>"; };
 		0F0D9796196AECC000D13FD8 /* SPPieChartValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPPieChartValue.h; sourceTree = "<group>"; };
 		0F0D9797196AECC000D13FD8 /* SPPieChartValue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPPieChartValue.m; sourceTree = "<group>"; };
+		0F287487196BE14D007601DC /* SPTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPTestViewController.h; sourceTree = "<group>"; };
+		0F287488196BE14D007601DC /* SPTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPTestViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +132,8 @@
 				0F0D9794196AE94A00D13FD8 /* SPPieChartViewLayer.m */,
 				0F0D9796196AECC000D13FD8 /* SPPieChartValue.h */,
 				0F0D9797196AECC000D13FD8 /* SPPieChartValue.m */,
+				0F287487196BE14D007601DC /* SPTestViewController.h */,
+				0F287488196BE14D007601DC /* SPTestViewController.m */,
 			);
 			path = PieChart;
 			sourceTree = "<group>";
@@ -264,6 +269,7 @@
 				0F0D976C196AE3F500D13FD8 /* main.m in Sources */,
 				0F0D9770196AE3F500D13FD8 /* SPAppDelegate.m in Sources */,
 				0F0D9795196AE94A00D13FD8 /* SPPieChartViewLayer.m in Sources */,
+				0F287489196BE14D007601DC /* SPTestViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

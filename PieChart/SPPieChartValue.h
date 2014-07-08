@@ -14,4 +14,6 @@
 
 @property (assign, nonatomic) CGFloat pieValue;
 
+- (id)initWithValue:(CGFloat)value color:(UIColor *)color;
+
 @end
