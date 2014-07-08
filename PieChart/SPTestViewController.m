@@ -33,12 +33,15 @@
 {
     [super viewDidLoad];
     
-    self.pieChartView.pieChartBackgroundColor = [UIColor grayColor];
+    self.pieChartView.pieChartBackgroundColor = self.view.backgroundColor;
     
-    SPPieChartValue *v1 = [[SPPieChartValue alloc] initWithValue:0.5f color:[UIColor redColor]];
-    SPPieChartValue *v2 = [[SPPieChartValue alloc] initWithValue:0.3f color:[UIColor greenColor]];
+    SPPieChartValue *v1 = [[SPPieChartValue alloc] initWithValue:0.2f color:[UIColor redColor]];
+    SPPieChartValue *v2 = [[SPPieChartValue alloc] initWithValue:0.25f color:[UIColor greenColor]];
+    SPPieChartValue *v3 = [[SPPieChartValue alloc] initWithValue:0.1f color:[UIColor magentaColor]];
+    SPPieChartValue *v4 = [[SPPieChartValue alloc] initWithValue:0.05f color:[UIColor yellowColor]];
+    SPPieChartValue *v5 = [[SPPieChartValue alloc] initWithValue:0.33f color:[UIColor blackColor]];
     
-    self.pieChartView.pieChartValues = @[v1, v2].mutableCopy;
+    self.pieChartView.pieChartValues = @[v1, v2, v3, v4, v5].mutableCopy;
 }
 
 - (void)didReceiveMemoryWarning

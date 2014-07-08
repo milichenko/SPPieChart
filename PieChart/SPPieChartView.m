@@ -32,11 +32,6 @@
 {
     self = [self initWithFrame:frame backgroundColor:nil pieChartValues:nil];
     
-    if (self)
-    {
-        // Initialization code
-    }
-    
     return self;
 }
 

@@ -9,6 +9,9 @@
 #import "SPPieChartViewLayer.h"
 #import "SPPieChartValue.h"
 
+#define PIE_CHART_STANDART_SIZE 56.0f
+#define PIE_CHART_STANDART_LINE_WIDTH 7.5f
+
 @implementation SPPieChartViewLayer
 
 @dynamic pieChartBackgroundcolor;
@@ -49,7 +52,7 @@
     
     CGFloat sizePercents = minSize / PIE_CHART_STANDART_SIZE;
     
-    CGFloat lineWidth = sizePercents * WORM_STANDART_LINE_WIDTH;
+    CGFloat lineWidth = sizePercents * PIE_CHART_STANDART_LINE_WIDTH;
     CGFloat radius = (minSize - lineWidth) / 2.0f;
     
     CGContextSaveGState(ctx);
@@ -57,7 +60,6 @@
     CGContextRotateCTM(ctx, -M_PI * 0.5);
     
     CGContextSetLineWidth(ctx, lineWidth);
-    CGContextSetLineCap(ctx, kCGLineCapRound);
     
     CGFloat endAngle = M_PI * 2.0f;
     
@@ -65,15 +67,22 @@
     
     CGContextAddArc(ctx, 0.0f, 0.0f, radius, 0.0f, endAngle, 0);
     
-    CGContextSetStrokeColorWithColor(ctx, self.indicatorBackgroundColor.CGColor);
+    CGContextSetStrokeColorWithColor(ctx, self.pieChartBackgroundcolor.CGColor);
     CGContextStrokePath(ctx);
     
-    CGContextBeginPath(ctx);
+    CGFloat startAngle = 0.0f;
     
-    CGContextAddArc(ctx, 0.0f, 0.0f, radius, 0.0f, endAngle * self.progressValue, 0);
-    
-    CGContextSetStrokeColorWithColor(ctx, self.indicatorForegroundColor.CGColor);
-    CGContextStrokePath(ctx);
+    for (SPPieChartValue *pieChartValue in self.pieChartValues)
+    {
+        CGContextBeginPath(ctx);
+        
+        CGContextAddArc(ctx, 0.0f, 0.0f, radius, startAngle, (endAngle * pieChartValue.pieValue) + startAngle, 0);
+        
+        CGContextSetStrokeColorWithColor(ctx, pieChartValue.pieColor.CGColor);
+        CGContextStrokePath(ctx);
+
+        startAngle += endAngle * pieChartValue.pieValue;
+    }
     
     CGContextRestoreGState(ctx);
     
