@@ -9,17 +9,16 @@
 #import "SPPieChartViewLayer.h"
 #import "SPPieChartValue.h"
 
-#define PIE_CHART_STANDART_SIZE 56.0f
-#define PIE_CHART_STANDART_LINE_WIDTH 7.5f
-
 @implementation SPPieChartViewLayer
 
-@dynamic pieChartBackgroundcolor;
 @dynamic pieChartValues;
+@dynamic pieChartBackgroundcolor;
+@dynamic pieChartValueColor;
+@dynamic totalPercents;
 
 + (BOOL)needsDisplayForKey:(NSString *)key
 {
-    if ([key isEqualToString:@"pieChartValues"])
+    if ([key isEqualToString:@"totalPercents"])
     {
         return YES;
     }
@@ -31,7 +30,7 @@
 
 - (id)actionForKey:(NSString *)aKey
 {
-    if ([aKey isEqualToString:@"pieChartValues"])
+    if ([aKey isEqualToString:@"totalPercents"])
     {
         CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:aKey];
         animation.fromValue = [self.presentationLayer valueForKey:aKey];
@@ -44,7 +43,6 @@
 
 - (void)drawInContext:(CGContextRef)ctx
 {
-    
     CGRect rect = self.frame;
     
     CGPoint center = CGPointMake(rect.size.width / 2.0f, rect.size.height / 2.0f);
@@ -72,17 +70,31 @@
     
     CGFloat startAngle = 0.0f;
     
-    for (SPPieChartValue *pieChartValue in self.pieChartValues)
-    {
-        CGContextBeginPath(ctx);
-        
-        CGContextAddArc(ctx, 0.0f, 0.0f, radius, startAngle, (endAngle * pieChartValue.pieValue) + startAngle, 0);
-        
-        CGContextSetStrokeColorWithColor(ctx, pieChartValue.pieColor.CGColor);
-        CGContextStrokePath(ctx);
+//    for (SPPieChartValue *pieChartValue in self.pieChartValues)
+//    {
+//        CGContextBeginPath(ctx);
+//        
+//        CGContextAddArc(ctx, 0.0f, 0.0f, radius, startAngle, startAngle + (endAngle * pieChartValue.pieValue), 0);
+//        
+//        CGContextSetStrokeColorWithColor(ctx, pieChartValue.pieColor.CGColor);
+//        CGContextStrokePath(ctx);
+//
+//        startAngle += endAngle * pieChartValue.pieValue;
+//    }
+    CGContextBeginPath(ctx);
+    
+    CGContextAddArc(ctx, 0.0f, 0.0f, radius, 0.0f, endAngle * self.totalPercents, 0);
+    NSLog(@"%@", self.pieChartValueColor);
+    CGContextSetStrokeColorWithColor(ctx, self.pieChartValueColor.CGColor);
+    CGContextStrokePath(ctx);
 
-        startAngle += endAngle * pieChartValue.pieValue;
-    }
+    CGContextBeginPath(ctx);
+    
+    CGContextAddArc(ctx, 0.0f, 0.0f, radius, 0.0f, endAngle * self.totalPercents, 0);
+    
+    CGContextSetStrokeColorWithColor(ctx, [UIColor clearColor].CGColor);
+    CGContextStrokePath(ctx);
+
     
     CGContextRestoreGState(ctx);
     

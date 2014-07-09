@@ -23,6 +23,7 @@
 		0F0D9792196AE8AE00D13FD8 /* SPPieChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F0D9791196AE8AE00D13FD8 /* SPPieChartView.m */; };
 		0F0D9795196AE94A00D13FD8 /* SPPieChartViewLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F0D9794196AE94A00D13FD8 /* SPPieChartViewLayer.m */; };
 		0F0D9798196AECC000D13FD8 /* SPPieChartValue.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F0D9797196AECC000D13FD8 /* SPPieChartValue.m */; };
+		0F17CB02196D36CE001769D4 /* SPPieLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F17CB01196D36CE001769D4 /* SPPieLayer.m */; };
 		0F287489196BE14D007601DC /* SPTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F287488196BE14D007601DC /* SPTestViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -60,6 +61,8 @@
 		0F0D9794196AE94A00D13FD8 /* SPPieChartViewLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPPieChartViewLayer.m; sourceTree = "<group>"; };
 		0F0D9796196AECC000D13FD8 /* SPPieChartValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPPieChartValue.h; sourceTree = "<group>"; };
 		0F0D9797196AECC000D13FD8 /* SPPieChartValue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPPieChartValue.m; sourceTree = "<group>"; };
+		0F17CB00196D36CE001769D4 /* SPPieLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPPieLayer.h; sourceTree = "<group>"; };
+		0F17CB01196D36CE001769D4 /* SPPieLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPPieLayer.m; sourceTree = "<group>"; };
 		0F287487196BE14D007601DC /* SPTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPTestViewController.h; sourceTree = "<group>"; };
 		0F287488196BE14D007601DC /* SPTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPTestViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -134,6 +137,8 @@
 				0F0D9797196AECC000D13FD8 /* SPPieChartValue.m */,
 				0F287487196BE14D007601DC /* SPTestViewController.h */,
 				0F287488196BE14D007601DC /* SPTestViewController.m */,
+				0F17CB00196D36CE001769D4 /* SPPieLayer.h */,
+				0F17CB01196D36CE001769D4 /* SPPieLayer.m */,
 			);
 			path = PieChart;
 			sourceTree = "<group>";
@@ -266,6 +271,7 @@
 			files = (
 				0F0D9798196AECC000D13FD8 /* SPPieChartValue.m in Sources */,
 				0F0D9792196AE8AE00D13FD8 /* SPPieChartView.m in Sources */,
+				0F17CB02196D36CE001769D4 /* SPPieLayer.m in Sources */,
 				0F0D976C196AE3F500D13FD8 /* main.m in Sources */,
 				0F0D9770196AE3F500D13FD8 /* SPAppDelegate.m in Sources */,
 				0F0D9795196AE94A00D13FD8 /* SPPieChartViewLayer.m in Sources */,

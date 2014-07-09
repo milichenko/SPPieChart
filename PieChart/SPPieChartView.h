@@ -12,6 +12,8 @@
 @interface SPPieChartView : UIView
 
 @property (strong, nonatomic) UIColor *pieChartBackgroundColor;
-@property (strong, nonatomic) NSMutableArray *pieChartValues;
+@property (strong, nonatomic) NSArray *pieChartValues;
+
+- (id)initWithFrame:(CGRect)frame backgroundColor:(UIColor *)backgroundColor pieChartValues:(NSArray *)pieChartValues;
 
 @end
