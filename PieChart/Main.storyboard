@@ -28,7 +28,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="randomizeAction:" destination="uU1-hT-hi1" eventType="touchUpInside" id="qk5-OB-CyZ"/>
+                                    <action selector="animateAction:" destination="uU1-hT-hi1" eventType="touchUpInside" id="U1d-dJ-zNn"/>
                                 </connections>
                             </button>
                         </subviews>

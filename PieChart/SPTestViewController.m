@@ -35,13 +35,13 @@
     
     self.pieChartView.pieChartBackgroundColor = self.view.backgroundColor;
     
-    SPPieChartValue *v1 = [[SPPieChartValue alloc] initWithValue:0.1f color:[UIColor redColor]];
-    SPPieChartValue *v2 = [[SPPieChartValue alloc] initWithValue:0.2f color:[UIColor greenColor]];
-    SPPieChartValue *v3 = [[SPPieChartValue alloc] initWithValue:0.15f color:[UIColor magentaColor]];
-    SPPieChartValue *v4 = [[SPPieChartValue alloc] initWithValue:0.3f color:[UIColor yellowColor]];
-    SPPieChartValue *v5 = [[SPPieChartValue alloc] initWithValue:0.23f color:[UIColor blackColor]];
-    SPPieChartValue *v6 = [[SPPieChartValue alloc] initWithValue:1.0f color:self.view.backgroundColor];
-    self.pieChartView.pieChartValues = @[v1, v2, v3, v4, v5, v6];
+    SPPieChartValue *v1 = [[SPPieChartValue alloc] initWithValue:0.25f color:[UIColor redColor]];
+    SPPieChartValue *v2 = [[SPPieChartValue alloc] initWithValue:0.1f color:[UIColor greenColor]];
+    SPPieChartValue *v3 = [[SPPieChartValue alloc] initWithValue:0.05f color:[UIColor magentaColor]];
+    SPPieChartValue *v4 = [[SPPieChartValue alloc] initWithValue:0.15f color:[UIColor yellowColor]];
+    SPPieChartValue *v5 = [[SPPieChartValue alloc] initWithValue:0.35f color:[UIColor blackColor]];
+    
+    self.pieChartView.pieChartValues = @[v1, v2, v3, v4, v5];
 }
 
 - (void)didReceiveMemoryWarning
@@ -52,20 +52,9 @@
 
 #pragma mark - IBAction
 
-- (IBAction)randomizeAction:(id)sender
+- (IBAction)animateAction:(id)sender
 {
-    /*SPPieChartValue *v1 = [[SPPieChartValue alloc] initWithValue:arc4random_uniform(10) / 50.0f color:[UIColor redColor]];
-    SPPieChartValue *v2 = [[SPPieChartValue alloc] initWithValue:arc4random_uniform(10) / 50.0f color:[UIColor greenColor]];
-    SPPieChartValue *v3 = [[SPPieChartValue alloc] initWithValue:arc4random_uniform(10) / 50.0f color:[UIColor magentaColor]];
-    SPPieChartValue *v4 = [[SPPieChartValue alloc] initWithValue:arc4random_uniform(10) / 50.0f color:[UIColor yellowColor]];
-    SPPieChartValue *v5 = [[SPPieChartValue alloc] initWithValue:arc4random_uniform(10) / 50.0f color:[UIColor blackColor]];*/
-    SPPieChartValue *v1 = [[SPPieChartValue alloc] initWithValue:0.1f color:[UIColor redColor]];
-    SPPieChartValue *v2 = [[SPPieChartValue alloc] initWithValue:0.2f color:[UIColor greenColor]];
-    SPPieChartValue *v3 = [[SPPieChartValue alloc] initWithValue:0.15f color:[UIColor magentaColor]];
-    SPPieChartValue *v4 = [[SPPieChartValue alloc] initWithValue:0.3f color:[UIColor yellowColor]];
-    SPPieChartValue *v5 = [[SPPieChartValue alloc] initWithValue:0.23f color:[UIColor blackColor]];
-    SPPieChartValue *v6 = [[SPPieChartValue alloc] initWithValue:0.0f color:self.view.backgroundColor];
-    self.pieChartView.pieChartValues = @[v1, v2, v3, v4, v5, v6];
+    [self.pieChartView test];
 }
 
 @end
