@@ -43,7 +43,7 @@
     self.pieChartView2.animationDuration = 2.0f;
     
     self.pieChartView3.pieChartBackgroundColor = self.view.backgroundColor;
-    self.pieChartView3.spacesPercents = 0.025f;
+    self.pieChartView3.spacesPercents = 0.01f;
     
     self.pieChartView4.pieChartBackgroundColor = self.view.backgroundColor;
     
