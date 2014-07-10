@@ -12,7 +12,6 @@
 
 @dynamic startAngle;
 @dynamic endAngle;
-@synthesize pieBackgroundColor;
 
 + (BOOL)needsDisplayForKey:(NSString *)key
 {
@@ -30,6 +29,7 @@
     
     if (self)
     {
+        self.animationDuration = PIE_CHART_DEFAULT_ANIMATION_DURATION;
         self.contentsScale = [[UIScreen mainScreen] scale];
 		[self setNeedsDisplay];
     }
@@ -47,6 +47,7 @@
 			self.startAngle = other.startAngle;
 			self.endAngle = other.endAngle;
 			self.pieBackgroundColor = other.pieBackgroundColor;
+            self.animationDuration = other.animationDuration;
 		}
 	}
 	
@@ -68,7 +69,7 @@
 	CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:key];
 	animation.fromValue = [[self presentationLayer] valueForKey:key];
 	animation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseOut];
-	animation.duration = 0.5;
+	animation.duration = self.animationDuration;
     
 	return animation;
 }

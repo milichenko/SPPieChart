@@ -14,7 +14,10 @@
 @property (strong, nonatomic) UIColor *pieChartBackgroundColor;
 @property (strong, nonatomic) NSArray *pieChartValues;
 
-- (id)initWithFrame:(CGRect)frame backgroundColor:(UIColor *)backgroundColor pieChartValues:(NSArray *)pieChartValues;
+@property (assign, nonatomic) CGFloat spacesPercents;
+@property (assign, nonatomic) CGFloat animationDuration;
+
+- (id)initWithFrame:(CGRect)frame backgroundColor:(UIColor *)backgroundColor pieChartValues:(NSArray *)pieChartValues spacesPercents:(CGFloat)spacesPercents animationDuration:(CGFloat)animationDuration;
 
 - (void)showWithAnimation;
 

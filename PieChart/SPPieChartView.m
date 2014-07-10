@@ -32,12 +32,12 @@
 
 - (id)initWithFrame:(CGRect)frame
 {
-    self = [self initWithFrame:frame backgroundColor:nil pieChartValues:nil];
+    self = [self initWithFrame:frame backgroundColor:nil pieChartValues:nil spacesPercents:0.0f animationDuration:PIE_CHART_DEFAULT_ANIMATION_DURATION];
     
     return self;
 }
 
-- (id)initWithFrame:(CGRect)frame backgroundColor:(UIColor *)backgroundColor pieChartValues:(NSArray *)pieChartValues
+- (id)initWithFrame:(CGRect)frame backgroundColor:(UIColor *)backgroundColor pieChartValues:(NSArray *)pieChartValues spacesPercents:(CGFloat)spacesPercents animationDuration:(CGFloat)animationDuration
 {
     self = [super initWithFrame:frame];
     
@@ -45,6 +45,8 @@
     {
         self.pieChartBackgroundColor = backgroundColor;
         self.pieChartValues = pieChartValues.mutableCopy;
+        self.spacesPercents = spacesPercents;
+        self.animationDuration = animationDuration;
         
         [self doInitialContainerLayerSetup];
     }
@@ -84,12 +86,14 @@
     {
         CGContextBeginPath(ctx);
         
-        CGContextAddArc(ctx, 0.0f, 0.0f, radius, startAngle, startAngle + (endAngle * pieChartValue.pieValue), 0);
+        CGContextAddArc(ctx, 0.0f, 0.0f, radius, startAngle, startAngle + (endAngle * (pieChartValue.pieValue - self.spacesPercents)), 0);
         
         CGContextSetStrokeColorWithColor(ctx, pieChartValue.pieColor.CGColor);
         CGContextStrokePath(ctx);
         
-        startAngle += endAngle * pieChartValue.pieValue;;
+        startAngle += endAngle * pieChartValue.pieValue;
+        
+        CGContextBeginPath(ctx);
     }
     
     CGContextRestoreGState(ctx);
@@ -105,6 +109,7 @@
     }
     
     SPPieLayer *pieLayer = [SPPieLayer layer];
+    pieLayer.animationDuration = self.animationDuration;
     pieLayer.frame = self.bounds;
     
     [self.containerLayer addSublayer:pieLayer];
