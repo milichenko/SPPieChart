@@ -12,6 +12,9 @@
 @interface SPTestViewController ()
 
 @property (weak, nonatomic) IBOutlet SPPieChartView *pieChartView;
+@property (weak, nonatomic) IBOutlet SPPieChartView *pieChartView2;
+@property (weak, nonatomic) IBOutlet SPPieChartView *pieChartView3;
+@property (weak, nonatomic) IBOutlet SPPieChartView *pieChartView4;
 
 @end
 
@@ -34,14 +37,11 @@
     [super viewDidLoad];
     
     self.pieChartView.pieChartBackgroundColor = self.view.backgroundColor;
+    self.pieChartView2.pieChartBackgroundColor = self.view.backgroundColor;
+    self.pieChartView3.pieChartBackgroundColor = self.view.backgroundColor;
+    self.pieChartView4.pieChartBackgroundColor = self.view.backgroundColor;
     
-    SPPieChartValue *v1 = [[SPPieChartValue alloc] initWithValue:0.25f color:[UIColor redColor]];
-    SPPieChartValue *v2 = [[SPPieChartValue alloc] initWithValue:0.1f color:[UIColor greenColor]];
-    SPPieChartValue *v3 = [[SPPieChartValue alloc] initWithValue:0.05f color:[UIColor magentaColor]];
-    SPPieChartValue *v4 = [[SPPieChartValue alloc] initWithValue:0.15f color:[UIColor yellowColor]];
-    SPPieChartValue *v5 = [[SPPieChartValue alloc] initWithValue:0.35f color:[UIColor blackColor]];
-    
-    self.pieChartView.pieChartValues = @[v1, v2, v3, v4, v5];
+    [self initPieChartsValues];
 }
 
 - (void)didReceiveMemoryWarning
@@ -54,7 +54,52 @@
 
 - (IBAction)animateAction:(id)sender
 {
-    [self.pieChartView test];
+    [self.pieChartView showWithAnimation];
+    [self.pieChartView2 showWithAnimation];
+    [self.pieChartView3 showWithAnimation];
+    [self.pieChartView4 showWithAnimation];
+}
+
+- (IBAction)resetAction:(id)sender
+{
+    self.pieChartView.pieChartValues = nil;
+    
+    [self initPieChartsValues];
+}
+
+- (void)initPieChartsValues
+{
+    SPPieChartValue *v1 = [[SPPieChartValue alloc] initWithValue:drand48() / 4 color:[UIColor redColor]];
+    SPPieChartValue *v2 = [[SPPieChartValue alloc] initWithValue:drand48() / 4 color:[UIColor greenColor]];
+    SPPieChartValue *v3 = [[SPPieChartValue alloc] initWithValue:drand48() / 4 color:[UIColor magentaColor]];
+    SPPieChartValue *v4 = [[SPPieChartValue alloc] initWithValue:drand48() / 4 color:[UIColor yellowColor]];
+    SPPieChartValue *v5 = [[SPPieChartValue alloc] initWithValue:drand48() / 4 color:[UIColor blackColor]];
+    
+    self.pieChartView.pieChartValues = @[v1, v2, v3, v4, v5];
+    
+    v1 = [[SPPieChartValue alloc] initWithValue:drand48() / 4 color:[UIColor redColor]];
+    v2 = [[SPPieChartValue alloc] initWithValue:drand48() / 4 color:[UIColor greenColor]];
+    v3 = [[SPPieChartValue alloc] initWithValue:drand48() / 4 color:[UIColor magentaColor]];
+    v4 = [[SPPieChartValue alloc] initWithValue:drand48() / 4 color:[UIColor yellowColor]];
+    v5 = [[SPPieChartValue alloc] initWithValue:drand48() / 4 color:[UIColor blackColor]];
+    
+    self.pieChartView2.pieChartValues = @[v1, v2, v3, v4, v5];
+    
+    v1 = [[SPPieChartValue alloc] initWithValue:drand48() / 4 color:[UIColor redColor]];
+    v2 = [[SPPieChartValue alloc] initWithValue:drand48() / 4 color:[UIColor greenColor]];
+    v3 = [[SPPieChartValue alloc] initWithValue:drand48() / 4 color:[UIColor magentaColor]];
+    v4 = [[SPPieChartValue alloc] initWithValue:drand48() / 4 color:[UIColor yellowColor]];
+    v5 = [[SPPieChartValue alloc] initWithValue:drand48() / 4 color:[UIColor blackColor]];
+    
+    self.pieChartView3.pieChartValues = @[v1, v2, v3, v4, v5];
+    
+    v1 = [[SPPieChartValue alloc] initWithValue:drand48() / 4 color:[UIColor redColor]];
+    v2 = [[SPPieChartValue alloc] initWithValue:drand48() / 4 color:[UIColor greenColor]];
+    v3 = [[SPPieChartValue alloc] initWithValue:drand48() / 4 color:[UIColor magentaColor]];
+    v4 = [[SPPieChartValue alloc] initWithValue:drand48() / 4 color:[UIColor yellowColor]];
+    v5 = [[SPPieChartValue alloc] initWithValue:drand48() / 4 color:[UIColor blackColor]];
+    
+    self.pieChartView4.pieChartValues = @[v1, v2, v3, v4, v5];
 }
 
 @end

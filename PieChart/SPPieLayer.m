@@ -82,8 +82,8 @@
     
     CGFloat sizePercents = minSize / PIE_CHART_STANDART_SIZE;
     
-    CGFloat lineWidth = sizePercents * PIE_CHART_STANDART_LINE_WIDTH;
-    CGFloat radius = (minSize - lineWidth) / 2.0f;
+    CGFloat lineWidth = (sizePercents * PIE_CHART_STANDART_LINE_WIDTH) + 2;
+    CGFloat radius = ((minSize - lineWidth) / 2.0f) + 1;
     
     CGContextSaveGState(ctx);
     CGContextTranslateCTM(ctx, center.x, center.y);
@@ -93,7 +93,7 @@
     
     CGContextBeginPath(ctx);
     
-    CGContextAddArc(ctx, 0.0f, 0.0f, radius, self.startAngle, self.endAngle, 0);
+    CGContextAddArc(ctx, 0.0f, 0.0f, radius, self.startAngle, self.endAngle, 1);
     
     CGContextSetStrokeColorWithColor(ctx, self.pieBackgroundColor.CGColor);
     CGContextStrokePath(ctx);

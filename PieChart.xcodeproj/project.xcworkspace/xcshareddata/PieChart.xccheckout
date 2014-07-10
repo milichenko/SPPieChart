@@ -5,34 +5,34 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>22C6D504-7376-499C-AFB6-B0E0B6FDBB7C</string>
+	<string>B29151DE-7B82-4C1E-A831-CB39248D4B6F</string>
 	<key>IDESourceControlProjectName</key>
 	<string>PieChart</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>7F95CDF9-82A8-46CF-9FF1-A100B8450F41</key>
-		<string>https://github.com/milichenko/SPPieChart.git</string>
+		<key>8ECC82BA-E3D7-48E0-8F94-7395FF0EAECA</key>
+		<string>https://github.com/milichenko/SPPieChart</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>PieChart.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>7F95CDF9-82A8-46CF-9FF1-A100B8450F41</key>
+		<key>8ECC82BA-E3D7-48E0-8F94-7395FF0EAECA</key>
 		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/milichenko/SPPieChart.git</string>
+	<string>https://github.com/milichenko/SPPieChart</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>7F95CDF9-82A8-46CF-9FF1-A100B8450F41</string>
+	<string>8ECC82BA-E3D7-48E0-8F94-7395FF0EAECA</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>7F95CDF9-82A8-46CF-9FF1-A100B8450F41</string>
+			<string>8ECC82BA-E3D7-48E0-8F94-7395FF0EAECA</string>
 			<key>IDESourceControlWCCName</key>
 			<string>SPPieChart</string>
 		</dict>

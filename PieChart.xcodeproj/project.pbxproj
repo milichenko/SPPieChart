@@ -21,7 +21,6 @@
 		0F0D9785196AE3F600D13FD8 /* PieChartTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F0D9784196AE3F600D13FD8 /* PieChartTests.m */; };
 		0F0D978F196AE6EE00D13FD8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F0D978E196AE6EE00D13FD8 /* Main.storyboard */; };
 		0F0D9792196AE8AE00D13FD8 /* SPPieChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F0D9791196AE8AE00D13FD8 /* SPPieChartView.m */; };
-		0F0D9795196AE94A00D13FD8 /* SPPieChartViewLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F0D9794196AE94A00D13FD8 /* SPPieChartViewLayer.m */; };
 		0F0D9798196AECC000D13FD8 /* SPPieChartValue.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F0D9797196AECC000D13FD8 /* SPPieChartValue.m */; };
 		0F17CB02196D36CE001769D4 /* SPPieLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F17CB01196D36CE001769D4 /* SPPieLayer.m */; };
 		0F287489196BE14D007601DC /* SPTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F287488196BE14D007601DC /* SPTestViewController.m */; };
@@ -57,8 +56,6 @@
 		0F0D978E196AE6EE00D13FD8 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		0F0D9790196AE8AE00D13FD8 /* SPPieChartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPPieChartView.h; sourceTree = "<group>"; };
 		0F0D9791196AE8AE00D13FD8 /* SPPieChartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPPieChartView.m; sourceTree = "<group>"; };
-		0F0D9793196AE94A00D13FD8 /* SPPieChartViewLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPPieChartViewLayer.h; sourceTree = "<group>"; };
-		0F0D9794196AE94A00D13FD8 /* SPPieChartViewLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPPieChartViewLayer.m; sourceTree = "<group>"; };
 		0F0D9796196AECC000D13FD8 /* SPPieChartValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPPieChartValue.h; sourceTree = "<group>"; };
 		0F0D9797196AECC000D13FD8 /* SPPieChartValue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPPieChartValue.m; sourceTree = "<group>"; };
 		0F17CB00196D36CE001769D4 /* SPPieLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPPieLayer.h; sourceTree = "<group>"; };
@@ -131,8 +128,6 @@
 				0F0D978E196AE6EE00D13FD8 /* Main.storyboard */,
 				0F0D9790196AE8AE00D13FD8 /* SPPieChartView.h */,
 				0F0D9791196AE8AE00D13FD8 /* SPPieChartView.m */,
-				0F0D9793196AE94A00D13FD8 /* SPPieChartViewLayer.h */,
-				0F0D9794196AE94A00D13FD8 /* SPPieChartViewLayer.m */,
 				0F0D9796196AECC000D13FD8 /* SPPieChartValue.h */,
 				0F0D9797196AECC000D13FD8 /* SPPieChartValue.m */,
 				0F287487196BE14D007601DC /* SPTestViewController.h */,
@@ -274,7 +269,6 @@
 				0F17CB02196D36CE001769D4 /* SPPieLayer.m in Sources */,
 				0F0D976C196AE3F500D13FD8 /* main.m in Sources */,
 				0F0D9770196AE3F500D13FD8 /* SPAppDelegate.m in Sources */,
-				0F0D9795196AE94A00D13FD8 /* SPPieChartViewLayer.m in Sources */,
 				0F287489196BE14D007601DC /* SPTestViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

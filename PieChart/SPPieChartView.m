@@ -111,26 +111,16 @@
     
     pieLayer = self.containerLayer.sublayers[0];
     pieLayer.pieBackgroundColor = self.superview.backgroundColor;
-    pieLayer.startAngle = 0.0f;
-    pieLayer.endAngle = 2 * M_PI;
-    
-//    self.normalizedPieValues = [NSMutableArray array];
-//    
-//    if (self.pieChartValues)
-//    {
-//        for (SPPieChartValue *pieChartValue in self.pieChartValues)
-//        {
-//            [self.normalizedPieValues addObject:@(pieChartValue.pieValue)];
-//        }
-//    }
-//    
-//    [self updatePieViews];
+    pieLayer.startAngle = 2 * M_PI;
+    pieLayer.endAngle = 0.0f;
 }
 
-- (void)test
+- (void)showWithAnimation
 {
+    [self setNeedsDisplay];
+    
     SPPieLayer *pieLayer = self.containerLayer.sublayers[0];
-    pieLayer.endAngle = 0.0f;
+    pieLayer.endAngle = 2 * M_PI;
 }
 
 #pragma mark - Private Methods
@@ -140,49 +130,4 @@
     self.containerLayer = [CALayer layer];
     [self.layer addSublayer:self.containerLayer];
 }
-
-/*- (void)updatePieViews
-{
-    self.containerLayer.frame = self.bounds;
-    
-	if (self.normalizedPieValues.count > _containerLayer.sublayers.count)
-    {
-		NSInteger count = self.normalizedPieValues.count - self.containerLayer.sublayers.count;
-		
-        for (int i = 0; i < count; i++)
-        {
-			SPPieLayer *pieLayer = [SPPieLayer layer];
-			pieLayer.frame = self.bounds;
-			
-			[self.containerLayer addSublayer:pieLayer];
-		}
-	}
-	else if (self.normalizedPieValues.count < self.containerLayer.sublayers.count)
-    {
-		NSInteger count = _containerLayer.sublayers.count - self.normalizedPieValues.count;
-        
-		for (int i = 0; i < count; i++)
-        {
-			[[self.containerLayer.sublayers objectAtIndex:0] removeFromSuperlayer];
-		}
-	}
-
-	CGFloat startAngle = 0.0;
-	NSInteger index = 0;
-	
-    for (NSNumber *num in self.normalizedPieValues)
-    {
-		CGFloat angle = num.floatValue * 2 * M_PI;
-		
-		SPPieLayer *pieLayer = self.containerLayer.sublayers[index];
-        SPPieChartValue *pieValue = self.pieChartValues[index];
-		pieLayer.pieBackgroundColor = pieValue.pieColor;
-		pieLayer.startAngle = startAngle;
-		pieLayer.endAngle = startAngle + angle;
-		
-		startAngle += angle;
-		index++;
-	}
-}*/
-
 @end

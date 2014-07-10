@@ -16,6 +16,6 @@
 
 - (id)initWithFrame:(CGRect)frame backgroundColor:(UIColor *)backgroundColor pieChartValues:(NSArray *)pieChartValues;
 
-- (void)test;
+- (void)showWithAnimation;
 
 @end
